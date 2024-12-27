@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscar Músicas</title>
+    <!-- Aqui estamos linkando o arquivo CSS correto -->
+    <link rel="stylesheet" href="busca.css">
+    <script>
+        function buscarMusicas() {
+            const pesquisa = document.getElementById('buscaInput').value.toLowerCase();
+            const musicas = document.getElementsByClassName('music-item');
+            
+            for (let i = 0; i < musicas.length; i++) {
+                const nomeMusica = musicas[i].querySelector('h3').textContent.toLowerCase();
+                if (nomeMusica.includes(pesquisa)) {
+                    musicas[i].style.display = 'block'; // Mostra música que corresponde à pesquisa
+                } else {
+                    musicas[i].style.display = 'none'; // Esconde música que não corresponde
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Buscar Músicas</h1>
+        </header>
+
+        <div class="search-bar">
+            <input type="text" id="buscaInput" placeholder="Pesquise por músicas..." onkeyup="buscarMusicas()">
+        </div>
+
+        <div class="music-list">
+            <div class="music-item">
+                <img src="https://upload.wikimedia.org/wikipedia/pt/f/f7/Madvillain_-_Madvillainy.jpeg" alt="Música 1">
+                <h3>Madvillainy</h3>
+                <button>Ouvir</button>
+            </div>
+            <div class="music-item">
+                <img src="https://upload.wikimedia.org/wikipedia/pt/3/3b/Dark_Side_of_the_Moon.png" alt="Música 2">
+                <h3>The Dark Side of The Moon</h3>
+                <button>Ouvir</button>
+            </div>
+            <div class="music-item">
+                <img src="https://cdn-images.dzcdn.net/images/cover/621c706e3416c6c52671ab7fe11878f6/0x1900-000000-80-0-0.jpg" alt="Música 3">
+                <h3>Nothing But the Best</h3>
+                <button>Ouvir</button>
+            </div>
+            <div class="music-item">
+                <img src="https://upload.wikimedia.org/wikipedia/pt/c/c9/To_Pimp_a_Butterfly.jpg" alt="Música 4">
+                <h3>To Pimp a Butterfly</h3>
+                <button>Ouvir</button>
+            </div>
+            <div class="music-item">
+                <img src="https://m.media-amazon.com/images/I/81hryXAVZjL.jpg" alt="Música 5">
+                <h3>Master of Puppets</h3>
+                <button>Ouvir</button>
+            </div>
+            
+        </div>
+
+        <!-- Botões de navegação -->
+        <a href="telainicial.html">Voltar à Tela Inicial</a>
+        <a href="perfl.html">Ir para Perfil</a>
+    </div>
+</body>
+</html>

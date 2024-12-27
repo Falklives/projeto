@@ -1,0 +1,87 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #111;
+    color: #fff;
+}
+
+.container {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #1a1a1a;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+header h1 {
+    text-align: center;
+    color: #cd90be;
+}
+
+.search-bar {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.search-bar input {
+    padding: 10px;
+    width: 80%;
+    max-width: 400px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #333;
+    color: #fff;
+}
+
+.music-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.music-item {
+    background-color: #222;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.music-item img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+.music-item h3 {
+    color: #fff;
+    margin-top: 10px;
+}
+
+button {
+    margin-top: 10px;
+    padding: 8px;
+    background-color: #cd90be;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #000;
+}
+
+/* Links de navegação */
+a {
+    color: #cd90be;
+    text-decoration: none;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+a:hover {
+    text-decoration: underline;
+}

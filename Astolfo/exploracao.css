@@ -1,0 +1,48 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #111;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background-color: #1a1a1a;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 900px;
+    text-align: center;
+}
+
+h1 {
+    color: #e50914;
+}
+
+.music-card {
+    background-color: #333;
+    margin: 10px;
+    padding: 15px;
+    border-radius: 8px;
+    display: inline-block;
+    width: 150px;
+    text-align: center;
+}
+
+button {
+    background-color: #e50914;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    color: #fff;
+}
+
+button:hover {
+    background-color: #d4080c;
+}

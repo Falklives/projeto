@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="cadastro.css">
+    <script>
+        // Função que redireciona após o cadastro
+        function cadastrarCliente(event) {
+            event.preventDefault();  // Evita o envio do formulário
+
+            const nome = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const telefone = document.getElementById('phone').value;
+
+            // Armazenando dados no localStorage
+            localStorage.setItem('clienteNome', nome);
+            localStorage.setItem('clienteEmail', email);
+            localStorage.setItem('clienteTelefone', telefone);
+
+            // Redirecionando para a página inicial
+            window.location.href = 'telainicial.html';  // Redireciona para a tela inicial
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Cadastro de Cliente</h1>
+        </header>
+
+        <form class="registration-form" onsubmit="cadastrarCliente(event)">
+            <label for="name">Nome:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="phone">Telefone:</label>
+            <input type="tel" id="phone" name="phone" required>
+            
+            <label for="password">Senha:</label>
+            <input type="password" id="password" name="password" required>
+            
+            <label for="confirm-password">Confirme a Senha:</label>
+            <input type="password" id="confirm-password" name="confirm-password" required>
+            
+            <button type="submit">Cadastrar</button>
+        </form>
+
+        <footer>
+            <p>&copy; Avalie músicas</p>
+            <a href="telainicial.html" class="home-link">Página Inicial</a>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil - Seu Site de Avaliações</title>
+    <link rel="stylesheet" href="perfil.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Perfil de <span id="nomeUsuario"></span></h1>
+        </header>
+
+        <div class="profile-info">
+            <p><strong>Email:</strong> <span id="emailUsuario"></span></p>
+            <p><strong>Telefone:</strong> <span id="telefoneUsuario"></span></p>
+        </div>
+
+        <!-- Botões de navegação -->
+        <a href="telainicial.html">Voltar à Tela Inicial</a>
+        <a href="exploracao.html">Explorar Músicas</a>
+
+        <!-- Script para carregar os dados do localStorage -->
+        <script>
+            document.getElementById('nomeUsuario').textContent = localStorage.getItem('clienteNome');
+            document.getElementById('emailUsuario').textContent = localStorage.getItem('clienteEmail');
+            document.getElementById('telefoneUsuario').textContent = localStorage.getItem('clienteTelefone');
+        </script>
+    </div>
+</body>
+</html>
